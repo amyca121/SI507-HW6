@@ -120,8 +120,7 @@ The background color of the page would be white.
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 
 This code creates the gray boxes:
-```js
-<style>
+```js <style>
 p{
 	background-color: #b3b3b3;
 	border: 3px solid #FFFFFF;
