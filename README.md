@@ -127,6 +127,7 @@ p{
 	padding: 3%;
 	font-size: 1.1em;
 	line-height: 1.5;
+}
 ```
 By replacing the `background-color` code with #0E0EE5 instead, I can change the color of the boxes from gray to blue.
 
