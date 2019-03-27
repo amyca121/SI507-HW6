@@ -120,9 +120,9 @@ The background color of the page would be white.
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 
 This code creates the gray boxes:
-```js <style>
+```js
 p{
-	background-color: #b3b3b3;
+	background-color: #0E0EE5;
 	border: 3px solid #FFFFFF;
 	padding: 3%;
 	font-size: 1.1em;
@@ -135,7 +135,7 @@ By replacing the `background-color` code with #0E0EE5 instead, I can change the 
 
 I looked at the article below to understand how `oncopy` works. I then looked at how the oncopy function was set up for the University of Michigan. I realized that I needed to make sure that the program understood what function outcome went with what University that was copied. So I used the function code at the top of the page and copied it:
 
-```
+```js
 function copyFunction(){
 	document.querySelector('#cheer').innerHTML += "Go blue!<br>"
 }
@@ -161,14 +161,15 @@ The code above causes that to happen because onclick is an event that calls on a
 
 I copied the previous function:
 
-```
+```js
 function handleClick(){
 	alert("hello");
+}
 ```
 I then changed the function to handleClicks to create a new function and added the "March 20, 2019" in place of the "hello" text.
 
 I then used this code:
-```
+```js
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
 I again replaced the function with handleClicks(), the "wow-button" with "equinox-button", and finally replaced the "Wow" with "Equinox 2019". This created a button with the text "Equinox 2019" on the website.
@@ -181,7 +182,7 @@ I again replaced the function with handleClicks(), the "wow-button" with "equino
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
 
 The error is red because because of the code near that top of the file that indicates:
-```
+```js
 .error{
 		color: red;
 }
@@ -208,10 +209,10 @@ The conditional statements in JavaScript are if, else if, and else. In python el
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
-```
-js
+```js
 $(document).ready(function(){
-    $("form").submit(function(event){
+    $("form").submit(function(event)
+	}
 ```
 The `(document).ready (function()` part of the code makes the function available once the document has been loaded. The `("form").submit(function(event))` part of the code triggers when the form is submitted. It is used to either validate the form before sending it to the server or abort it. I think this has to do with people inputing one word only into the text box and hitting submit. By submitting it the form is checking to validate based on the parameters of the code below. For the part of the code that is not valid there is a event.preventDefault that will stop the form from being submitted.  
 (https://www.tutorialspoint.com/What-is-document-ready-method-in-jQuery)
