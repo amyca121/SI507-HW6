@@ -120,7 +120,8 @@ The background color of the page would be white.
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 
 This code creates the gray boxes:
-```<style>
+```
+<style>
 p{
 	background-color: #b3b3b3;
 	border: 3px solid #FFFFFF;
@@ -134,7 +135,8 @@ By replacing the `background-color` code with #0E0EE5 instead, I can change the 
 
 I looked at the article below to understand how `oncopy` works. I then looked at how the oncopy function was set up for the University of Michigan. I realized that I needed to make sure that the program understood what function outcome went with what University that was copied. So I used the function code at the top of the page and copied it:
 
-```function copyFunction(){
+```
+function copyFunction(){
 	document.querySelector('#cheer').innerHTML += "Go blue!<br>"
 }
 ```
