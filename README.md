@@ -91,6 +91,7 @@ In order to run the javascript, the program has to know that you are writing jav
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
 
 The functions console.log and alert seem to be similar to the function `print` in Python. The function alert acts more as a pop-up box while console.log is like debugging and it puts something on the web console. If you actually want something to render on the page, console.log is the better choice.
+
 (https://www.w3schools.com/js/js_output.asp)
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
@@ -109,8 +110,10 @@ The word `document` represents the document being created by the html.
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
 
-It looks like this line of code uses the document.querySelector to pull items from the document that have the prefix 'li', puts the items together and gets the length or the number of items. I think innerHTML updates the website based on inputs without having to refresh it.
+It looks like this line of code uses the `document.querySelector` to pull items from the document that have the prefix 'li', puts the items together and gets the length or the number of items. I think innerHTML updates the website based on inputs without having to refresh it.
+
 (https://www.quackit.com/javascript/tutorial/innerhtml_in_javascript.cfm)
+
 (https://www.w3schools.com/jsref/met_element_queryselector.asp)
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
@@ -127,7 +130,7 @@ p{
 	padding: 3%;
 	font-size: 1.1em;
 	line-height: 1.5;
-	```
+```
 By replacing the `background-color` code with #0E0EE5 instead, I can change the color of the boxes from gray to blue.
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
@@ -138,7 +141,8 @@ I looked at the article below to understand how `oncopy` works. I then looked at
 	document.querySelector('#cheer').innerHTML += "Go blue!<br>"
 }
 ```
-Then I changed the name of the function by adding a "2 at the end (copyFunction2) and changed the "Go Blue" to "O Canada" instead. Then I added the `oncopy="copyFunction2()">McGill University` under the "Some universities" code block. Below that I add the id "gill" to finish out the call to run the function.
+Then I changed the name of the function by adding a '2' at the end (copyFunction2) and changed the "Go Blue" to "O Canada" instead. Then I added the `oncopy="copyFunction2()">McGill University` under the "Some universities" code block. Below that I add the id "gill" to finish out the call to run the function.
+
 (https://www.w3schools.com/jsref/event_oncopy.asp)
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
@@ -158,13 +162,16 @@ The code above causes that to happen because onclick is an event that calls on a
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
 
 I copied the previous function:
-```function handleClick(){
+
+```
+function handleClick(){
 	alert("hello");
 ```
 I then changed the function to handleClicks to create a new function and added the "March 20, 2019" in place of the "hello" text.
 
 I then used this code:
-```<button onclick=handleClick() id="wow-button">Wow</button>
+```
+<button onclick=handleClick() id="wow-button">Wow</button>
 ```
 I again replaced the function with handleClicks(), the "wow-button" with "equinox-button", and finally replaced the "Wow" with "Equinox 2019". This created a button with the text "Equinox 2019" on the website.
 
@@ -176,7 +183,8 @@ I again replaced the function with handleClicks(), the "wow-button" with "equino
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
 
 The error is red because because of the code near that top of the file that indicates:
-```.error{
+```
+.error{
 		color: red;
 }
 .good {
@@ -188,15 +196,19 @@ Later on in the code an if/else statement is set up in which a currentValue is t
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
 
 I googled this question by searching the exact code and found a stack overflow discussing it. It said that when the carrot is outside the character class it notes a "begins with" operator, so anything that beings with a-z or A-Z. If it is inside the character class it negates it. I think this means that for something to be valid it has to start with a-z or A-Z (it has to start with a letter)
+
 (https://stackoverflow.com/questions/2790813/regular-expression-a-za-z-or-a-za-z)
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
+
 The conditional statements in JavaScript are if, else if, and else. In python else if is identified as elif. Otherwise it appears that the conditional statements are used in pretty much the same fashion.
+
 (https://www.w3schools.com/jsref/jsref_if.asp)
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
 
 10000 is used to set the duration of time it takes for the code to fade out (slowly disappear). I think it might be that it sets the code to take 10000 milliseconds fade out rather than right away.
+
 (https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_fadeout_fadein)
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
@@ -208,10 +220,12 @@ $(document).ready(function(){
 ```
 The `(document).ready (function()` part of the code makes the function available once the document has been loaded. The `("form").submit(function(event))` part of the code triggers when the form is submitted. It is used to either validate the form before sending it to the server or abort it. I think this has to do with people inputing one word only into the text box and hitting submit. By submitting it the form is checking to validate based on the parameters of the code below. For the part of the code that is not valid there is a event.preventDefault that will stop the form from being submitted.  
 (https://www.tutorialspoint.com/What-is-document-ready-method-in-jQuery)
+
 (https://javascript.info/forms-submit)
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 	* *HINT:* You'll have to make some changes to the conditional statement, and possibly look up some JavaScript conditional syntax. You'll also need to look carefully at what generates visible output right now.
 
 Based on the way conditional statements work, I decided to add an `else if` statement in between the original if and else statements in the code. That way if the word is not valid that will be tested and show first. The program then will check to see if the word is specifically the text "hello". If it is, it will print out "hello to you too." I based this `else if` code on the `else` code already written. After some issues, I realized I had to add `(currentValue == "hello")`, like the `if` statement above, to specify to the program what to look for. I then used the `$("#result").html('<p class="good">Nice!</p>').show().fadeOut(10000);` code from the original else statement, replacing "Nice!" with "Hello to you too!" I left the `class="good"` because that determines the color of the text and we want the text to be the same blue color as the "Nice!" returned by the `else` statement.
+
 (https://www.w3schools.com/js/js_if_else.asp)
