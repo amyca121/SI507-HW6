@@ -60,6 +60,12 @@ Below are a bunch of questions and indications of things to do. For each indicat
 
 * **Amy Carr (amyca)**
 
+* Emma De Vera (edevera)
+
+* Kendall Lehhmann (lehmannk)
+
+* Reine Patterson (repatter)
+
 ## Questions & code instructions
 
 ### The first questions address the `jsPracticeLab.html` file.
